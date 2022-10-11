@@ -8,12 +8,12 @@
   <body>
     <h1>Coding Form!</h1>
     <form action="" method="get">
-      <div class="email">
-        <label for="email">Email</label>
+      <label for="email">Email</label>
+      <div>
         <input type="email" name="email" id="email" required>
       </div>
-      <div class="dropbox">
-        <p>Why is coding cool?</p>
+      <label for="coding">Why is coding cool?</label>
+      <div>
         <select name="coding" id="coding">
           <option value="select">Select an option</option>
           <option value="interesting">Because it's interesting</option>
@@ -36,8 +36,10 @@
         <label for="sign_up">Sign me up!</label>
       </div>
       <div class="comments">
-        <p>Comments</p>
-        <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Enter your comments..."></textarea>
+        <label for="comments">Comments</label>
+        <div>
+          <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Enter your comments..."></textarea>
+        </div>
       </div>
       <input type="submit" name="coding_form">
     </form>
