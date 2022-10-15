@@ -1,0 +1,57 @@
+/* Style Elements/Classes */
+
+body {
+  font-family: Avenir, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+header {
+  border-bottom: 1px solid lightgrey;
+  margin-top: 0.5em;
+  padding-bottom: 0.75em;
+}
+
+li {
+  list-style: none;
+  margin-left: 2em;
+}
+
+a {
+  color: grey;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.btn-contact-us {
+  color: white;
+  background-color: rgb(41 68 100);
+  border-radius: 4px;
+  padding: 10px 16px;
+}
+
+/* Utility Elements/Classes */
+
+.header-container,
+.main-container {
+  margin: 0 auto;
+  width: 950px;
+}
+
+.row {
+  display: flex;
+}
+
+.nav-column {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-ul {
+  display: flex;
+}
+
+img {
+  width: 15%;
+}
