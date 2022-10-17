@@ -242,14 +242,10 @@ footer {
   display: flex;
 }
 
-.row-nav {
+/* .row-nav {
   display: flex;
   justify-content: flex-end;
-}
-
-.prefer-locations-row {
-  display: flex;
-}
+} */
 
 .column-full {
   flex-basis: 100%;
