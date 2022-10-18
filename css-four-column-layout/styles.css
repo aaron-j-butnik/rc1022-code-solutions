@@ -1,0 +1,64 @@
+/* Global Styles */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Barlow, sans-serif;
+  margin: 0;
+}
+
+h1,
+h4,
+p {
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 0.75rem;
+}
+
+img {
+  width: 100%;
+}
+
+.header-container,
+.main-container {
+  background-color: rgb(247 248 250);
+  margin: 0 auto;
+  padding-left: 4em;
+  padding-right: 4em;
+  width: 80%;
+}
+
+.main-container {
+  padding-bottom: 2em;
+}
+
+.image-icons {
+  width: 25%;
+  margin: 0 auto;
+}
+
+.column-fourth-styles {
+  padding: 0 1em;
+}
+
+/* Utility Elements/Classes */
+
+.row {
+  display: flex;
+}
+
+.column-full {
+  flex-basis: 100%;
+}
+
+.column-fourth {
+  flex-basis: 25%;
+}
