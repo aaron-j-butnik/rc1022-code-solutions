@@ -36,6 +36,10 @@ footer {
   padding: 3em 0;
 }
 
+.nav-ul-style {
+  justify-content: flex-end;
+}
+
 .hero-container-style {
   margin-bottom: 6em;
   position: relative;
@@ -241,11 +245,6 @@ footer {
 .row {
   display: flex;
 }
-
-/* .row-nav {
-  display: flex;
-  justify-content: flex-end;
-} */
 
 .column-full {
   flex-basis: 100%;
