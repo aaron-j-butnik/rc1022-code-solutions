@@ -17,9 +17,6 @@ function getNumbersToTen() {
   return numbers;
 }
 
-console.log(getNumbersToTen());
-console.log(getNumbersToTen());
-
 function getEvenNumbersToTwenty() {
   var evenNumbers = [];
   var currentNumber = 2;
@@ -29,9 +26,6 @@ function getEvenNumbersToTwenty() {
   }
   return evenNumbers;
 }
-
-console.log(getEvenNumbersToTwenty());
-console.log(getEvenNumbersToTwenty());
 
 function repeatWord(word, times) {
   var count = 1;
@@ -43,19 +37,11 @@ function repeatWord(word, times) {
   return repeated;
 }
 
-console.log(repeatWord('repeat', 17));
-console.log(repeatWord('repeat', 17));
-
 function logEachCharacter(string) {
   for (var i = 0; i < string.length; i++) {
     console.log(string[i]);
   }
 }
-
-console.log(logEachCharacter(''));
-console.log(logEachCharacter(' '));
-console.log(logEachCharacter('Aaron'));
-console.log(logEachCharacter('Coding is fun!'));
 
 function doubleAll(numbers) {
   var doubled = [];
@@ -65,9 +51,6 @@ function doubleAll(numbers) {
   return doubled;
 }
 
-console.log(doubleAll([1, 2, 3, 4]));
-console.log(doubleAll([3, 5, 7, 11]));
-
 function getKeys(object) {
   var keys = [];
   for (var key in object) {
@@ -76,4 +59,10 @@ function getKeys(object) {
   return keys;
 }
 
-console.log({ name: 'Aaron', job: 'coding' });
+function getValues(object) {
+  var values = [];
+  for (var value in object) {
+    values.push(object[value]);
+  }
+  return values;
+}
