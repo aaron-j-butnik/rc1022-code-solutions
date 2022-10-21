@@ -1,0 +1,78 @@
+/* Global Styles */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  margin: 0;
+}
+
+h1 {
+  margin-top: 1em;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.column-fifth-styles {
+  padding: 0.25em;
+}
+
+.company-name {
+  border-right: 1.5px solid lightgrey;
+  font-size: 0.75em;
+  font-weight: bold;
+}
+
+.product-size {
+  color: lightgray;
+  font-size: 0.75em;
+  padding-left: 4px;
+}
+
+.sale-price,
+.retail-price {
+  font-size: 0.75em;
+}
+
+.sale-price {
+  background-color: rgb(255 242 231);
+  font-weight: bold;
+}
+
+.retail-price {
+  color: lightgray;
+  padding-left: 0.25em;
+}
+
+/* Utility Elements/Classes */
+
+img {
+  object-fit: contain;
+  height: 75%;
+  width: 100%;
+}
+
+.header-container,
+.main-container {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.row {
+  display: flex;
+}
+
+.column-full {
+  flex-basis: 100%;
+}
+
+.column-fifth {
+  flex-basis: 20%;
+}
