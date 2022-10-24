@@ -5,7 +5,7 @@
 1. Define function named getValues with one parameter (object);
 2. Assign an empty array literal to variable objPropValues;
 3. Use 'for...in' loop with variable prop in variable object;
-4. Push variable object at variable prop to variable objPropValues.
+4. Use push method of variable objPropValues with one argument, parameter object at variable prop.
 5. Return variable objPropValues.
 */
 
