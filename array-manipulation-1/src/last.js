@@ -3,7 +3,8 @@
 /* Pseudo Code:
   Goal: Return last element of the array.
 
-  1. Return parameter at index length of parameter - 1.
+  1. Function definition named last with one parameter.
+  2. Return length property of parameter arrary minus 1 at index of parameter array.
 */
 
 function last(array) {

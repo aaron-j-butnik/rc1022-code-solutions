@@ -19,12 +19,3 @@ function initial(array) {
   }
   return newArray;
 }
-
-/* Pseudo Code
-
-  1. Function definition named initial with one parameter, array.
-  2. Empty array literal assigned to variable newArray.
-  3. 'for-loop': zero assigned to variable i; i less than length of array minus one; increment by one after each iteration.
-  4. Push array at variable i into newArray variable.
-  5 Return newArray variable.
-*/
