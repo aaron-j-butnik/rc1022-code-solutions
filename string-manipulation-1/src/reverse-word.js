@@ -3,7 +3,8 @@
 /* Pseudo Code:
   Goal: Return a string containing the characters of the parameter in reverse order.
 
-  1. Declare a variable and assign an empty string as the value.
+  1. Function definition named reverseWord with one parameter.
+  2. Assign an empty string to variable newString.
   2. Use a 'for-loop'.
   3. Set initialization equal to the length of the parameter minus 1.
   4. Set condition of 'for-loop' to be greater than or equal to 0.

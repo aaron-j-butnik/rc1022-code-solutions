@@ -3,10 +3,11 @@
 /* Pseudo Code
   Goal: A Boolean indicating whether or not char is a vowel. isVowel should handle both uppercase and lowercase characters.
 
-  1. Make conditional 'if' statement.
-  2. In condition, check to see if parameter is strickly equal to uppercase vowels, or lowercase vowels.
-  3. If condition is met, return true.
-  4. If condition is not met, return false.
+  1. Function definition isVowel with one parameter.
+  2. Make conditional 'if' statement.
+  3. In condition, check to see if parameter is strickly equal to uppercase vowels, or lowercase vowels.
+  4. If condition is met, return true.
+  5. If condition is not met, return false.
 */
 
 function isVowel(char) {

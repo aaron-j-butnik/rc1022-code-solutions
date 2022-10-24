@@ -2,9 +2,9 @@
 
 /* Pseudo Code:
   Goal: Return original word with only first character uppercase.
-  1. Isolate first character with string at index 0 and make  uppercase.
-  2. Isolate all characters after string at index 0 and make lowercase.
-  3. Join together string.
+  1. Use the toUpperCase method with no arguments of parameter string at index zero.
+  2. Use toLowerCase method with no arguments of slice method with one argument (1) of parameter string.
+  3. Concatenate.
   4. Return string.
 */
 
