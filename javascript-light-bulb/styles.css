@@ -1,0 +1,48 @@
+/* Styles Elements/Classes */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+body.bg-on {
+  background-color: rgb(254 249 241);
+}
+
+.bg-off {
+  background-color: rgb(17 17 17);
+}
+
+div.light-bulb {
+  background-color: rgb(250 234 132);
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+}
+
+.lb-off {
+  background-color: rgb(37 37 37);
+  display: hidden;
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+}
+
+.row-styles {
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Utility Elements/Classes */
+
+.row {
+  display: flex;
+}
+
+.column-full {
+  flex-basis: 100%;
+}
