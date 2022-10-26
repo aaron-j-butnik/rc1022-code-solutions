@@ -1,0 +1,87 @@
+/* Elements/Classes Styles */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  position: relative;
+}
+
+p {
+  font-weight: bold;
+}
+
+.overlay {
+  background: rgb(0 0 0 / 75%);
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.btn-open-modal {
+  position: relative;
+  background-color: rgb(138 138 211);
+  border: none;
+  border-radius: 6px;
+  box-shadow: 3px 3px 3px rgb(175 175 175);
+  color: white;
+  font-family: Montserrat, sans-serif;
+  margin: 1em;
+  padding: 0.75em 2.5em;
+
+  /* z-index: -1; */
+}
+
+.btn-open-modal:hover {
+  cursor: pointer;
+}
+
+.btn-no {
+  background-color: red;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 3px 3px 3px rgb(175 175 175);
+  font-family: Montserrat, sans-serif;
+  font-weight: bold;
+  padding: 0.5em 2em;
+}
+
+.btn-no:hover {
+  cursor: pointer;
+}
+
+.modal-container {
+  margin: 0 auto;
+  width: 200px;
+}
+
+.srvy-column-styles {
+  background-color: white;
+  border-radius: 6px;
+  margin: 0 auto;
+  padding: 1.5em;
+  position: fixed;
+  text-align: center;
+  top: 250px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Utility Elements/Classes */
+
+.row {
+  display: flex;
+}
+
+.column-full {
+  flex-basis: 100%;
+}
