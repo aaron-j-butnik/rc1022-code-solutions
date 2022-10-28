@@ -13,21 +13,15 @@ function handleClick(event) {
         Array.from($tabElements)[i].classList.remove('active');
       }
     }
-  }
-  if (event.target.matches('.tab')) {
-    var $dataViewValue = event.target.getAttribute('data-view');
+
+    var dataViewValue = event.target.getAttribute('data-view');
 
     for (var j = 0; j < Array.from($viewElements).length; j++) {
-      if ($dataViewValue !== Array.from($viewElements[j].getAttribute('data-view'))) {
-        Array.from($viewElements)[j].className = ('view hidden');
+      if (dataViewValue === Array.from($viewElements)[j].getAttribute('data-view')) {
+        Array.from($viewElements)[j].classList.remove('hidden');
       } else {
-        Array.from($viewElements)[j].className = ('hidden');
+        Array.from($viewElements)[j].classList.add('hidden');
       }
     }
   }
 }
-// console.log(event.target);
-// console.log($viewElements);
-// console.log($tabElements);
-// console.log($elementName);
-// console.log(Array.from($tabElements)[1]);
