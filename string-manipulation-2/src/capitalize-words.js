@@ -18,5 +18,5 @@ function capitalizeWords(words) {
   for (var i = 0; i < wordsArr.length; i++) {
     wordsCapArr.push(wordsArr[i][0].toUpperCase() + wordsArr[i].slice(1).toLowerCase());
   }
-  return wordsCapArr.join(' ');
+  return (wordsCapArr.join(' '));
 }
