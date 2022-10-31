@@ -3,34 +3,12 @@
 /* Pseudo Code
 
 1. Function definition named includes with two parameters, (array, value);
-2. 'for-loop' - Initialization: Assign zero to variable i;
-              - Condition: var i is less than length property of array object.
-              - Final Expression: increment var i by one for each iteration.
-3. 'if' statement:
-              - Condition:
+2. The some method of the array object is being called with one argument, an anonymous function with one parameter (checkTruthyOrFalsey).
+3. The parameter checkTruthyOrFalsey is set strickly equal to parameter value, which is being returned by the anonymous function, which is then being returned by the some method of the array object.
 */
 
-// function include(array, value) {
-//   for (var i = 0; i < array.length; i++) {
-//     if (
-//       array[i] === 'baz' ||
-//       array[i] === 'corge' ||
-//       array[i] === '2' ||
-//       array[i] === '7' ||
-//       array[i] === 'false' ||
-//       array[i] === 'null' ||
-//       array[i] === 'true' ||
-//       array[i] === 'foo' ||
-//       array[i] === 'baz') {
-
-//       }
-//   }
-// }
-
 function includes(array, value) {
-  for (var i = 0; i < array.length; i++) {
-    if (array[i] || array[i] === false) {
-      return;
-    }
-  }
+  return array.some(function (checkTruthyOrFalsey) {
+    return checkTruthyOrFalsey === value;
+  });
 }
