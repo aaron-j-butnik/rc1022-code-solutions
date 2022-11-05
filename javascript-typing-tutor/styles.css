@@ -21,10 +21,17 @@ div {
 
 .correct {
   color: rgb(138 224 9);
-  border-bottom: 2px solid rgb(138 224 9);
 }
 
 .incorrect {
   color: red;
   border-bottom: 2px solid red;
+}
+
+.on-letter {
+  border-bottom: 2px solid black;
+}
+
+.end {
+  border: none;
 }
