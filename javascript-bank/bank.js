@@ -12,6 +12,7 @@ Bank.prototype.openAccount = function (holder, balance) {
     jeffAccount.deposit(balance);
     this.accounts.push(jeffAccount);
     this.nextAccountNumber++;
+    // console.log(jeffAccount);
     return jeffAccount.number;
   } else {
     return null;
@@ -19,25 +20,21 @@ Bank.prototype.openAccount = function (holder, balance) {
 
 };
 
-// Bank.prototype.getAccount = function (number) {
+Bank.prototype.getAccount = function (number) {
 
-//   for (var i = 0; i < this.accounts.length; i++) {
-//     if (this.accounts[i].number === number) {
-//       return this.accounts[i];
-//     }
-//   }
-//   return null;
-// };
+  for (var i = 0; i < this.accounts.length; i++) {
+    if (this.accounts[i].number === number) {
+      return this.accounts[i];
+    }
+  }
+  return null;
+};
 
-// Bank.prototype.getTotalAssets = function () {
-//   var grandBalance = 0;
+Bank.prototype.getTotalAssets = function () {
+  var sum = 0;
+  for (var i = 0; i < this.accounts.length; i++) {
+    sum += this.accounts[i].getBalance();
 
-//   for (var i = 0; i < this.transactions.length; i++) {
-//     if (this.transactions[i].type === 'deposit') {
-//       totalDeposits += this.transactions[i].amount;
-//     } else {
-//       totalWithdraw += this.transactions[i].amount;
-//     }
-//   }
-//   return totalDeposits - totalWithdraw;
-// };
+  }
+  return sum;
+};
