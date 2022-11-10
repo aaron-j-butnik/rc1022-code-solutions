@@ -15,11 +15,9 @@ $leftChev.addEventListener('click', handleLeftChev);
 $btnMain.addEventListener('click', handleBtn);
 
 function handleRightChev(event) {
-
   imageIndex++;
   if (imageIndex === imageUrls.length) {
     imageIndex = 0;
-
   }
   $imageChange.setAttribute('src', imageUrls[imageIndex]);
   for (var i = 0; i < $btns.length; i++) {
