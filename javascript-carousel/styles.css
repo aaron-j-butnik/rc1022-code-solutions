@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  margin-top: 4rem;
+}
+
+img {
+  width: 100%;
+}
+
+.fa-circle {
+  font-size: 2rem;
+  margin: 2rem;
+}
+
+.bg-circle {
+  border-radius: 50%;
+  background-color: black;
+}
+
+.container-style {
+  border: 4px solid black;
+}
+
+/* Utility classes/elements */
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.container-img {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.row-style {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.column-full {
+  flex-basis: 100%;
+}
+
+.column-half {
+  flex-basis: 50%;
+}
+
+.column-quarter {
+  flex-basis: 25%;
+}
+
+.chev-align {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cq-style {
+  display: flex;
+  align-items: center;
+}
+
+.btn-center {
+  display: flex;
+  justify-content: center;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Font awesome icons */
+
+i {
+  font-size: 4rem;
+}
