@@ -50,32 +50,15 @@ img {
   flex-basis: 100%;
 }
 
-.column-half {
-  flex-basis: 50%;
-}
-
-.column-quarter {
-  flex-basis: 25%;
-}
-
 .chev-align {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.cq-style {
-  display: flex;
-  align-items: center;
-}
-
 .btn-center {
   display: flex;
   justify-content: center;
-}
-
-.hidden {
-  display: none;
 }
 
 /* Font awesome icons */
