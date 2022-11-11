@@ -9,6 +9,9 @@ function isPalindromic(string) {
   // i: 2
   //   v v
   // racecar
+  //   v  v
+  // taco cat
+
   for (var i = 0; i < string.length; i++) {
     if (string[i] !== string[string.length - i - 1]) {
       return false;
