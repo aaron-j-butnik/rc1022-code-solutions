@@ -7,10 +7,9 @@ function titleCase(title) {
   var words = title.split(' ');
   // console.log('words: ', words);
   for (var i = 0; i < words.length; i++) {
-    // var isStartOfSubtitle = false;
 
     // TODO: Set isStartOfSubtitle to true if the previous word ended with a ":" (use .endsWith())
-    if (!minorWords.includes(words[i].toLowerCase()) || words[i].endsWith(':')) {
+    if (!minorWords.includes(words[i].toLowerCase()) || (i > 0 && words[i - 1].endsWith(':'))) {
       words[i] = words[i][0].toUpperCase() + words[i].slice(1).toLowerCase();
     } else {
       words[i] = words[i].toLowerCase();
@@ -21,7 +20,7 @@ function titleCase(title) {
     if (words[i] === 'Api') {
       words[i] = 'API';
     }
-    if (words[i] === words[0]) {
+    if (i === 0) {
       words[i] = words[i][0].toUpperCase() + words[i].slice(1).toLowerCase();
     }
     if (words[i].includes('-')) {
@@ -30,7 +29,10 @@ function titleCase(title) {
       words[i] = split[0] + '-' + splitWord;
     }
   }
-  // console.log(words.join(' '));
-  return words.join(' ');
+  var result = words.join(' ');
+  result = result.replaceAll('Javascript', 'JavaScript');
+
+  // console.log(result);
+  return result;
 
 }
