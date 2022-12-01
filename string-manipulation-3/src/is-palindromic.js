@@ -1,13 +1,10 @@
 /* exported isPalindromic */
 
 /* Pseudo Code:
-1. Define function named isPalindromic with one parameter (string);
-2. Assign the replace method of the string object being called with two arguments string space, and empty string, to the variable string.
-3. for loop - Zero assigned to variable i.
-            - i is less than the length property of the string.
-            - i is incremented by one each iteration.
-4. if statement: condition - string object at index i is strickley not equal to string object at length property of string object minus var i minus one.
-  -return false;
+1. Replace method of the string object assigned to parameter string.
+2. for loop, assign zero to var i, i < length method of string object, i++.
+3. if statement, string at i, not equal to string at length of string objecct minus i minus 1.
+4. if true, return false.
 5. Return true.
 
 */

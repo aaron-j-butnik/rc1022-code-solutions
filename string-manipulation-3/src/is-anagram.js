@@ -1,23 +1,14 @@
 /* exported isAnagram */
 
 /*
-1. loop over firstString.
-2. loop over secondString.
-3. check to see if firstString[i] is not equal to secondString [j].
-4. if true, return false.
-5. else return true.
+1. ReplaceAll method of firstString object assigned to var firstStrNoSpace
+2. ReplaceAll method of secondString object assigned to var secondStrNoSpace
+3. Split method of the firstStrNoSpace, sort method of object, join method of object, assigned to var sortedFirstString.
+4. SPlit method of the secondStrNoSpace, sort method of object, join method of object, assigned to var sortedSecondString.
+5. If statement, condition sortedFirstString var === sortedSecondString var.
+6. If true, return true.
+7. Return false.
 */
-
-// function isAnagram(firstString, secondString) {
-//   for (var i = 0; i < firstString.length; i++) {
-//     for (var j = 0; j < secondString.length; j++) {
-//       if (firstString[i] !== secondString[j]) {
-//         return false;
-//       }
-//     }
-//   }
-//   return true;
-// }
 
 function isAnagram(firstString, secondString) {
   var firstStrNoSpace = firstString.replaceAll(' ', '');
@@ -30,23 +21,4 @@ function isAnagram(firstString, secondString) {
     return true;
   }
   return false;
-
-  // if (firstStrNoSpace.length !== secondStrNoSpace.length) {
-  //   return false;
-  // }
-  // for (var i = 0; i < firstStrNoSpace.length; i++) {
-  //   if (!secondStrNoSpace.includes(firstStrNoSpace[i])) {
-  //     return false;
-  //   }
-  // }
-  // for (var j = 0; j < secondStrNoSpace.length; j++) {
-  //   if (!firstStrNoSpace.includes(secondStrNoSpace[j])) {
-  //     return false;
-  //   }
-  // }
-  // return true;
 }
-
-// var result = isAnagram('abcc', 'abca');
-
-// console.log('result: ', result);
