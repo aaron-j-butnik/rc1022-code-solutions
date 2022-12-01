@@ -1,29 +1,10 @@
 /* exported flatten */
 
-// function flatten(array) {
-//   var newArr = [];
-//   for (var i = 0; i < array.length; i++) {
-//     for (var j = 0; j < array[i].length; j++) {
-//       newArr.push(array[i][j]);
-//     }
-//   }
-//   console.log(newArr);
-//   return newArr;
-// }
+/*
+1. Assigne empty array literal to var result.
+2. Return concat method of the result object being called with argument spread of array variable.
 
-// function flatten(array) {
-//   var result = [];
-
-//   if (!Array.isArray(array)) {
-//     return array;
-//   }
-
-//   for (var data of array) {
-//     result = result.concat(flatten(data));
-//   }
-//   console.log(result);
-//   return result;
-// }
+*/
 
 function flatten(array) {
   var result = [];
