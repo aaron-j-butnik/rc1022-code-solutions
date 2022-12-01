@@ -1,4 +1,4 @@
-function add(x, y) {
+function addTwoNums(x, y) {
   return x + y;
 }
-module.exports = add;
+module.exports = addTwoNums;
