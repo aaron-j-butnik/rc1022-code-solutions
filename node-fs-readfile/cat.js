@@ -1,3 +1,6 @@
-const text = process.argv[2];
+// const fs = require('fs');
 
-console.log(text);
+// for (var i = 2; i < process.argv.length; i++) {
+
+// }
+// fs.readFile();
