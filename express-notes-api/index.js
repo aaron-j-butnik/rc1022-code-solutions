@@ -35,12 +35,13 @@ app.post('/api/notes', (req, res) => {
     res.status(400).json({ error: 'Content is a required field.' });
   } else {
     const createdNote = JSON.stringify(dataJSON, null, 2);
-    fs.writeFile('data.json', createdNote, err => {
+    fs.writeFile('derp/data.json', createdNote, err => {
       if (err) {
         console.error(err);
         res.status(500).json({ error: 'An unexpected error occurred.' });
+      } else {
+        res.status(201).json(dataJSON.notes[id]);
       }
-      res.status(201).json(dataJSON.notes[id]);
     });
   }
 });
