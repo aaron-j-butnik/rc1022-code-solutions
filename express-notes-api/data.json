@@ -1,5 +1,5 @@
 {
-  "nextId": 23,
+  "nextId": 11,
   "notes": {
     "2": {
       "id": 2,
@@ -13,59 +13,9 @@
       "id": 6,
       "content": "A closure is formed when a function retains access to variables in its lexical scope."
     },
-    "9": {
-      "id": 9,
-      "content": "Inertia is a property of matter."
-    },
     "10": {
-      "content": "hello",
-      "id": 10
-    },
-    "11": {
-      "content": "hello2",
-      "id": 11
-    },
-    "12": {
-      "content": "hello3",
-      "id": 12
-    },
-    "13": {
-      "content": "",
-      "id": 13
-    },
-    "14": {
-      "content": "",
-      "id": 14
-    },
-    "15": {
-      "id": 15
-    },
-    "16": {
-      "id": 16
-    },
-    "17": {
-      "content": "error test",
-      "id": 17
-    },
-    "18": {
-      "content": "error test2",
-      "id": 18
-    },
-    "19": {
-      "content": "error test3",
-      "id": 19
-    },
-    "20": {
-      "content": "error test4",
-      "id": 20
-    },
-    "21": {
-      "content": "error test3",
-      "id": 21
-    },
-    "22": {
-      "content": "error test3",
-      "id": 22
+      "content": "Completed express-notes-api Challenge!",
+      "id": "10"
     }
   }
 }
