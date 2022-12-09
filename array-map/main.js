@@ -13,7 +13,7 @@ const doubled = numbers => numbers.map(element => element * 2);
 console.log(doubled(numbers));
 
 // All numbers formatted into "$0.00" strings.
-const prices = numbers => numbers.map(element => `$${element}.00`);
+const prices = numbers => numbers.map(element => '$' + element.toFixed(2));
 console.log(prices(numbers));
 
 // All langueages converted to uppercase.
