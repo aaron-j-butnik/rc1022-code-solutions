@@ -17,14 +17,18 @@ const traits = [
   { trainer: 'ash' }
 ];
 
+// All numbers added together.
 const sum = numbers => numbers.reduce((acc, currentVal) => acc + currentVal, 0);
 console.log(sum(numbers));
 
+// All numbers multiplied together.
 const product = numbers => numbers.reduce((acc, currentVal) => acc * currentVal, 1);
 console.log(product(numbers));
 
+// A number that is the result of combing all transactions in account.
 const balance = account => account.reduce((acc, currentVal) => currentVal.type === 'deposit' ? acc + currentVal.amount : acc - currentVal.amount, 0);
 console.log(balance(account));
 
+// An object that is the result of combining all properties of the objects within traits. composite.
 const composite = traits => traits.reduce((acc, currentVal) => Object.assign(acc, currentVal));
 console.log(composite(traits));
