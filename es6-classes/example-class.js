@@ -1,8 +1,4 @@
-class ExampleClass {
-  constructor() {
-    this.class = 'JavaScript';
-  }
-}
+class ExampleClass {}
 
 const example = new ExampleClass();
 
