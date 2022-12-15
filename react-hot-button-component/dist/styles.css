@@ -1,0 +1,70 @@
+div {
+  width: 100%;
+  text-align: center;
+}
+
+button {
+  margin-top: 6rem;
+}
+
+.normal {
+  background-color: lightgrey;
+  border: 4px solid black;
+  width: 200px;
+  height: 60px;
+  font-size: 1.5rem;
+}
+
+.cold {
+  color: white;
+  background-color: purple;
+  border: 4px solid black;
+  width: 200px;
+  height: 60px;
+  font-size: 1.5rem;
+}
+
+.cool {
+  color: white;
+  background-color: mediumpurple;
+  border: 4px solid black;
+  width: 200px;
+  height: 60px;
+  font-size: 1.5rem;
+}
+
+.tepid {
+  color: white;
+  background-color: lightcoral;
+  border: 4px solid black;
+  width: 200px;
+  height: 60px;
+  font-size: 1.5rem;
+}
+
+.warm {
+  color: black;
+  background-color: lightsalmon;
+  border: 4px solid black;
+  width: 200px;
+  height: 60px;
+  font-size: 1.5rem;
+}
+
+.hot {
+  color: black;
+  background-color: yellow;
+  border: 4px solid black;
+  width: 200px;
+  height: 60px;
+  font-size: 1.5rem;
+}
+
+.atomic {
+  color: black;
+  background-color: white;
+  border: 4px solid black;
+  width: 200px;
+  height: 60px;
+  font-size: 1.5rem;
+}
