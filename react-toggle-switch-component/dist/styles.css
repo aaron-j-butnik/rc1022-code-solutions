@@ -1,0 +1,45 @@
+.container-switch-off {
+  background-color: lightgrey;
+  display: inline-block;
+  height: 40px;
+  width: 100px;
+  margin: 2rem;
+  position: relative;
+  border-radius: 30px;
+}
+
+.off {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  left: 0;
+  border-radius: 50%;
+}
+
+.container-switch-on {
+  background-color: green;
+  display: inline-block;
+  height: 40px;
+  width: 100px;
+  margin: 2rem;
+  position: relative;
+  border-radius: 30px;
+}
+
+.on {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  right: 0;
+  border-radius: 50%;
+}
+
+.container-text {
+  height: 60px;
+  position: relative;
+  display: inline-block;
+}
+
+span {
+  position: absolute;
+}
