@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+}
+
+h1 {
+  margin-left: 1rem;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem;
+}
+
+li {
+  margin-bottom: 1rem;
+}
+
+li:hover {
+  cursor: pointer;
+}
+
+i {
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+.grey-bg {
+  display: inline-block;
+  width: 85%;
+  background-color: grey;
+  color: grey;
+  height: 100vh;
+  position: absolute;
+}
+
+.btn {
+  background-color: white;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.menu {
+  display: inline-block;
+  background-color: white;
+  height: 100vh;
+  width: 15%;
+  margin: 0;
+}
+
+.hidden {
+  display: none;
+}
