@@ -1,0 +1,22 @@
+.fa-x {
+  color: red;
+}
+
+.fa-check {
+  color: green;
+}
+
+.error-message {
+  color: red;
+  margin-top: 0.5rem;
+}
+
+.icon {
+  display: inline-block;
+}
+
+.password {
+  display: inline-block;
+  margin-right: 0.5rem;
+  margin-top: 0.25rem;
+}
