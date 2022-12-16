@@ -3,35 +3,43 @@ import React from 'react';
 export class Stopwatch extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { count: 0 };
-    // this.startTime = this.startTime.bind(this);
-    // this.stopTime = this.stopTIme.bind(this);
-    // this.resetTime = this.resetTime.bind(this);
+    this.state = {
+      count: 0,
+      isPaused: true
+    };
+    this.toggleTime = this.toggleTime.bind(this);
+    this.resetTime = this.resetTime.bind(this);
   }
 
-  startTime() {
-    this.time = setInterval(() =>
-      this.setState({
-        count: this.state.count + 1, isPaused: false
-      }), 1000);
-  }
-
-  stopTime() {
-    clearInterval(this.time);
+  toggleTime() {
+    const { isPaused } = this.state;
+    if (isPaused) {
+      this.time = setInterval(() =>
+        this.setState({
+          count: this.state.count + 1, isPaused: false
+        }), 1000);
+    } else {
+      this.setState({ isPaused: true });
+      clearInterval(this.time);
+    }
   }
 
   resetTime() {
-    this.setState({ count: 0 });
+    const { isPaused } = this.state;
+    if (isPaused) { this.setState({ count: 0, isPaused: true }); }
   }
 
   render() {
-    // const isPaused = this.state.isPaused;
-    // if (isPaused) {
+    const toggleBtn = this.state.isPaused ? 'fa-play' : 'fa-pause';
     return (
-      <div className="watch-container">
-        <h1>Timer: {this.state.count}</h1>
+      <div>
+        <div className="watch-container" onClick={this.resetTime}>
+          <h1>{this.state.count}</h1>
+        </div>
+        <div className="btn">
+          <i className={`fa-solid ${toggleBtn}`} onClick={this.toggleTime}></i>
+        </div>
       </div>
     );
-    // }
   }
 }
