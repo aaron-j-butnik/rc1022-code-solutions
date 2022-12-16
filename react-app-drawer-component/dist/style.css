@@ -36,6 +36,7 @@ i {
 
 .btn {
   background-color: white;
+  display: inline-block;
 }
 
 .btn:hover {
