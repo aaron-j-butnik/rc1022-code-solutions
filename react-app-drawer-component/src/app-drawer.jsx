@@ -33,7 +33,7 @@ export class AppDrawer extends React.Component {
             <li onClick={this.toggleAppDrawer}>Sign In</li>
           </ul>
         </div>
-        <div className={`${toggleBackground}`} onClick={this.toggleAppDrawer}>,
+        <div className={`${toggleBackground}`} onClick={this.toggleAppDrawer}>
         </div>
       </div>
     );

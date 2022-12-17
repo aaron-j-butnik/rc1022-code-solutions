@@ -27,7 +27,7 @@ i {
 
 .grey-bg {
   display: inline-block;
-  width: 85%;
+  width: 100%;
   background-color: grey;
   color: grey;
   height: 100vh;
@@ -37,6 +37,8 @@ i {
 .btn {
   background-color: white;
   display: inline-block;
+  left: 0;
+  transition: 1s;
 }
 
 .btn:hover {
@@ -47,8 +49,8 @@ i {
   display: inline-block;
   background-color: white;
   height: 100vh;
-  width: 15%;
   margin: 0;
+  width: 200px;
 }
 
 .hidden {
