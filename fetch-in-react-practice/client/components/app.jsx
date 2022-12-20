@@ -19,10 +19,10 @@ export default class App extends React.Component {
      * Then 😉, once the response JSON is received and parsed,
      * update state with the received todos.
      */
-    fetch('http://localhost:3000/api/todos')
+    fetch('api/todos')
       .then(res => res.json())
       .then(data => this.setState({ todos: data }))
-      .catch(err => console.error({ Error: err }));
+      .catch(err => console.error('Error:', err));
   }
 
   addTodo(newTodo) {
@@ -42,6 +42,18 @@ export default class App extends React.Component {
     * TIP: Use Array.prototype.concat to create a new array containing the contents
     * of the old array, plus the object returned by the server.
     */
+    fetch('api/todos', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(newTodo)
+    })
+      .then(res => res.json())
+      .then(data => this.setState({
+        todos: this.state.todos.concat(data)
+      }))
+      .catch(err => console.error('Error:', err));
   }
 
   toggleCompleted(todoId) {
@@ -66,6 +78,25 @@ export default class App extends React.Component {
      * TIP: Be sure to SERIALIZE the updates in the body with JSON.stringify()
      * And specify the "Content-Type" header as "application/json"
      */
+    const toggledObject = this.state.todos.find(todo => todo.todoId === todoId);
+    const toggledIndex = this.state.todos.indexOf(toggledObject);
+    const newObj = { isCompleted: !toggledObject.isCompleted };
+    fetch(`api/todos/${todoId}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(newObj)
+    })
+      .then(res => res.json())
+      .then(data => {
+        const todosCopy = [...this.state.todos];
+        todosCopy[toggledIndex] = data;
+        this.setState({
+          todos: todosCopy
+        });
+      })
+      .catch(err => console.error('Error:', err));
   }
 
   render() {
