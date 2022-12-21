@@ -17,11 +17,11 @@ export class Accordion extends React.Component {
 
   render() {
     const infoArray = this.props.info;
-    // console.log(infoArray);
+    const toggleContent = !this.state.isClicked ? 'content hidden' : 'content';
     const infoDisplay = infoArray.map(info =>
-      <div className='container' key={info.id} onClick={this.handleClick}>
-        <div className='title'>{info.language}</div>
-        <div className='content'>{info.textContent}</div>
+      <div className='container' key={info.id}>
+        <div className='title' onClick={this.handleClick}>{info.language}</div>
+        <div className={toggleContent}>{info.textContent}</div>
       </div>);
     return (
       infoDisplay
