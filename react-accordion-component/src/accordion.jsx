@@ -5,24 +5,31 @@ export class Accordion extends React.Component {
     super(props);
     this.state = {
       isClicked:
-      false,
-      id: 1
+      null
     };
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick() {
-    this.setState({ isClicked: !this.state.isClicked });
+  handleClick(event) {
+    if (event.target.id === this.state.isClicked) {
+      this.setState({ isClicked: null });
+    } else {
+      this.setState({ isClicked: event.target.id });
+    }
+
   }
 
   render() {
     const infoArray = this.props.info;
-    const toggleContent = !this.state.isClicked ? 'content hidden' : 'content';
-    const infoDisplay = infoArray.map(info =>
-      <div className='container' key={info.id}>
-        <div className='title' onClick={this.handleClick}>{info.language}</div>
-        <div className={toggleContent}>{info.textContent}</div>
-      </div>);
+    const infoDisplay = infoArray.map(info => {
+      const toggleContent = this.state.isClicked === info.number ? 'content' : 'content hidden';
+      return (
+        <div className='container' key={info.number}>
+          <div className='title' id={info.number} onClick={this.handleClick}>{info.language}</div>
+          <div className={toggleContent}>{info.content}</div>
+        </div>
+      );
+    });
     return (
       infoDisplay
     );
