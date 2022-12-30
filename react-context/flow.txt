@@ -1,0 +1,100 @@
+User can sign up:
+  Client Side -
+    The user will see the signin/signup form rendered by the auth-form.jsx component.
+
+    For signup, the user will enter a username and password which will be assigned as variables in the handleChange method that is listening for the change of state on the input values.
+
+    The fetch method is called with two arguments, (The variable 'action' holding the props that is put into the javascript expression of the template literal, and the const variable req which is an object containing the property method: 'POST', headers: {'Content-Type': 'application/json'}, and body: JSON.stringify(this.state)).
+
+    Then a then promise method is called with res function that returns a res.json() object.
+
+    Then a then promise method is called with result function with a conditional that checks if action is strictly equal to string 'sign-up'.  If it is then assign sign-up to window.location.hash (changing the view to signup)
+      else if there is a rsult.user and a result.token,
+        then pass the result to the onSignIn method of the props property of the this object.
+
+    The handleSubmit method submits the name and password values from the this.State property in the property body from the req object.
+
+  Server Side -
+
+    Within index.js, a request is recieved on the server from the post method of the /api/auth/sign-up url from the client.
+
+    The username and password are taken from the request body and assigned as variables.
+
+    If no username or password, then throw new ClientError 400.
+
+    If username and password pass the conditional in the post method for 'sign-up', the password gets hashed through argon2 hash method.
+
+   Then a then promise is called with a function hashedPassword where the 'username' and 'hashedPassword' get inserted into the postgresql database using the sql constant and params, when called with the db.query() method.
+
+   Then a then promise is called with function result where result.rows of the sql database is assigned to a deconstructed variable user.
+
+   Vairable user is then passed the the json method of the status method called with 201, of the res body.  And sent as a response to the client.
+
+
+User can sign in:
+
+  Client side -
+    On the auth-form.jsx component, For signup, the user will enter a username and password which will be assigned as variables in the handleChange method that is listening for the change of state on the input values.
+
+    The fetch method is called with two arguments, (The variable 'action' holding the props that is put into the javascript expression of the template literal, and the const variable req which is an object containing the property method: 'POST', headers: {'Content-Type': 'application/json'}, and body: JSON.stringify(this.state)).
+
+    Then a then promise method is called with res function that returns a res.json() object.
+
+    Then a then promise method is called with result function with a conditional that checks if action is strictly equal to string 'sign-up'.  If it is then assign sign-up to window.location.hash (changing the view to signup)
+      else if there is a rsult.user and a result.token,
+        then pass the result to the onSignIn method of the props property of the this object.
+
+    The handleSubmit method submits the name and password values from the this.State property in the property body from the req object.
+
+  Server side -
+    The post request from the client side is recieved by the post method of the app object, and the variables username and password are deconstruced form the req.body.
+
+    If no username or password then throw new ClientError 401.
+
+    If username and password are valid, assign the userId and hashedPassword from users where username = $1 to the const variable sql.  Assign [username] to const variable params.
+
+    Call the query method of the db object with arguments sql, and params.
+
+    Then a then method is called with the function result where reslut.rows is assigned to the deconstructed const variable user.
+
+    If not user then throw new ClientError 401.
+
+    Else, assgin user object to the deconstructed const variables userId, and hashedPassword.
+
+    Return the verify method of the argon2 objct being called with hashedPassword and password.
+
+    Then call a then promise with function isMatching.  If not isMatching, throw new ClientError 401.
+
+    Else Assign the object literal with properties userId, and username to const variable payload.
+
+    Assign the sign method of the jwt object being called with two arguments, (payload, and process.env.TOKEN_Secret) to the const variable token.
+
+    Call the json method of the res object and pass in the object literal with properties token, and user: payload.
+
+    Within the class App component, the handleSignIn is then called with one argument result which now holds the user, and token.  Which are then deconstructed and assigned to const variable user and token.
+
+    The setItem method of the localstorage property of the window objec tis called with 2 arguments string 'react-context-jwt' and token.  Also, the setState method of the this object is called with one argument, object literal containing the user object.
+
+    ComponentDidMount method is called with no arguments.
+
+    Within the componentDidMount method, the addEventListener method of the window object is called with two arguments, string 'hashchange' and anonymous function which returns the setState method of the this object called with one arguments, an object literal with property route: and value parseRoute funciton called with the hash property of the location property of the window object. Which switches the 'page' to the home page of the app.
+
+    Here we can see the lovely Rick Astley gifs.
+
+User can stay signed in:
+
+   User can stay signed in since after the user signs in the this.setState property is user and the token was saved to localstorage using the setItem method.
+
+   The renderPage method is called with no arguments and this.state.route is assigned to the deconstructed const variable path.  If path is equal to empty string we return to <Haome/>
+
+   On page refesh the token and user are recognized in local storage and the page remains on the home page.
+
+User can sign out.
+
+  When user clicks the signout button, the onClick event handler on the navbar.jsx component calls the handleSignout method on the app.jsx component.
+
+  Within the handleSignOut method, the removeItem method of the localStorage property of the window object is called with one argument ('react-context-jwt'), which removes the token object saved in localStorage.
+
+  This.setState method of the this object is called with one argument an object literal with property user and value of null.  Changing the state of the component.
+
+  Since the user property is null and the token has been removed the path is set to sign-in or 'sign-up' in the renderPage function, which returns <Auth /> returning the user to the auth-form.jsx.
